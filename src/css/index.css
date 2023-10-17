@@ -21,6 +21,7 @@ html {
   border: 0;
   outline: 0;
   font: inherit;
+  outline: 1px solid red;
 }
 
 :root {
@@ -33,9 +34,10 @@ html {
   --clr-neutral-075: hsl(0, 0%, 100%, 0.75);
   --clr-neutral-060: hsl(0, 0%, 100%, 0.6);
 
-  --fs-body: calc((1rem / 16)*15);
-  --fs-heading: calc((1rem / 16)*36);
-  --fs-nums: calc((1rem / 16)*20);
+  --fs-body: calc((1rem / 16) * 15);
+  --fs-heading: calc((1rem / 16) * 36);
+  --fs-heading-m: calc((1rem / 16) * 30);
+  --fs-nums: calc((1rem / 16) * 20);
 
   --ff-inter: "Inter", sans-serif;
   --ff-lexed: "Lexend Deca", sans-serif;
@@ -53,6 +55,9 @@ body {
 }
 
 body {
+}
+main {
+  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,32 +65,52 @@ body {
 }
 
 article {
+  overflow: hidden;
   display: flex;
+  flex-direction: row-reverse;
   max-width: 1110px;
   background-color: var(--clr-primary-700);
   line-height: 1.1;
+  border-radius: 1em;
 }
 article > * {
   width: 50%;
   overflow: hidden;
 }
+
+@media screen and (max-width: 1100px) {
+  article {
+    flex-direction: column;
+    width: 60%;
+    min-width: 300px;
+
+    max-width: 500px;
+  }
+  article > * {
+    width: 100%;
+  }
+  img {
+    content: url(../images/image-header-mobile.jpg);
+  }
+}
+
 figure {
   background-color: var(--clr-accent-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .image {
-  width: 100%;
-  height: auto;
-  opacity: 0.5;
+  min-width: 100%;
+  height: 100%;
   object-fit: cover;
+  opacity: 0.5;
 }
 
 .container {
   display: grid;
   gap: 2rem;
   padding: 5rem;
-}
-
-.desc-container {
 }
 
 .heading {
@@ -95,9 +120,19 @@ figure {
   margin-bottom: 1.25rem;
 }
 
-.description{
+.description {
   color: var(--clr-neutral-075);
   line-height: 1.5;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    padding: 10%;
+    text-align: center;
+  }
+  .heading {
+    font-size: var(--fs-heading-m);
+  }
 }
 
 .stats-container {
@@ -112,10 +147,23 @@ figure {
 .stat {
   font-size: var(--fs-nums);
   font-weight: var(--fw-700);
-  padding: 1em;
+  /* padding: 1em; */
 }
-.stat-type{
+.stat-type {
   color: var(--clr-neutral-060);
   font-size: var(--fs-body);
   text-transform: uppercase;
+  margin-top: 0.5em;
+}
+
+@media screen and (max-width: 1100px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .stat-item {
+  }
+  .stat-type {
+    font-size: 12px;
+  }
 }

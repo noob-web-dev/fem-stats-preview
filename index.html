@@ -13,11 +13,15 @@
 
     <link rel="stylesheet" href="./src/css/index.css" />
     <style>
+      html {
+        position: relative;
+      }
       .attribution {
+        display: block;
         font-size: calc(11rem / 16);
         width: 100%;
         text-align: center;
-        position: absolute;
+        position: sticky;
         bottom: 20px;
       }
       .attribution a {
@@ -26,41 +30,43 @@
     </style>
   </head>
   <body>
-    <article>
-      <figure>
-        <img class="image" src="./src/images/image-header-desktop.jpg" alt="" />
-      </figure>
-      <div class="container">
-        <div class="desc-container">
-          <h1 class="heading">
-            Get <span class="highlight">insights</span> that help your business
-            grow.
-          </h1>
-          <p class="description">
-            Discover the benefits of data analytics and make better decisions
-            regarding revenue, customer experience, and overall efficiency.
-          </p>
+    <main>
+      <article>
+        <figure>
+          <img
+            class="image"
+            src="./src/images/image-header-desktop.jpg"
+            alt=""
+          />
+        </figure>
+        <div class="container">
+          <div class="desc-container">
+            <h1 class="heading">
+              Get <span class="highlight">insights</span> that help your
+              business grow.
+            </h1>
+            <p class="description">
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue, customer experience, and overall efficiency.
+            </p>
+          </div>
+          <div class="stats-container">
+            <div class="stat-item">
+              <p class="stat">10k+</p>
+              <p class="stat-type">companies</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat">314</p>
+              <p class="stat-type">templates</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat">12m+</p>
+              <p class="stat-type">queries</p>
+            </div>
+          </div>
         </div>
-        <div class="stats-container">
-          <p class="stat-item">
-            <span class="stat">10k+</span><br /><span class="stat-type"
-              >companies</span
-            >
-          </p>
-          <p class="stat-item">
-            <span class="stat">314</span><br /><span class="stat-type"
-              >templates</span
-            >
-          </p>
-          <p class="stat-item">
-            <span class="stat">12m+</span><br /><span class="stat-type"
-              >queries</span
-            >
-          </p>
-        </div>
-      </div>
-    </article>
-
+      </article>
+    </main>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
