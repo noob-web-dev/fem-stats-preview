@@ -53,9 +53,6 @@ body {
   font-family: var(--ff-inter);
   color: var(--clr-neutral-100);
 }
-
-body {
-}
 main {
   min-height: 100%;
   display: flex;
@@ -123,6 +120,9 @@ figure {
 .description {
   color: var(--clr-neutral-075);
   line-height: 1.5;
+}
+.highlight{
+  color: var(--clr-accent-400);
 }
 
 @media screen and (max-width: 1100px) {
