@@ -21,7 +21,7 @@ html {
   border: 0;
   outline: 0;
   font: inherit;
-  outline: 1px solid red;
+  outline: 0;
 }
 
 :root {
